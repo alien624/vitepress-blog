@@ -1,6 +1,7 @@
 # Vitepress Blog Starter Template
 
 A simple template that uses the default Vitepress theme but with a few tweaks. I wanted to make my blog with Vitepress, but I did not find any template similar to this, so I made mine! Feel free to copy anything since everything I did here is very simple and basic. A special thanks to [Paul Laros](https://laros.io/), who wrote insightful articles on generating RSS feeds, metatags, and sitemaps in a VitePress project. I added the blog post listing and made a few other configurations, but my goal was to keep this project as clean and straightforward as possible so others could easily customize it to their needs.
+Feel free to reach me if you need any help, and I strongly recommend reading Vitepress docs or opening a Q&A discussion at their repository.
 
 ## Setup
 
