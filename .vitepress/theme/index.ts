@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import BlogPostList from './components/blog/BlogPostList.vue'
+import News from './components/playground/News.vue'
 
 export default {
   extends: DefaultTheme,
@@ -15,5 +16,6 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // ...
     app.component("BlogPostList", BlogPostList);
+    app.component("News", News);
   }
 } satisfies Theme

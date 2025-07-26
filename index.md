@@ -7,15 +7,14 @@ hero:
   text: "Just for fun"
   tagline: create something beautiful from nothing.
   actions:
-    - theme: brand
+    - theme: alt
       text: Blog
       link: /blog
     - theme: alt
       text: About this project
       link: /about
-
-features:
-  - title: Playground
-    details: fetching somethings
+    - theme: alt
+      text: News
+      link: /news
 ---
 
