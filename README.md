@@ -34,3 +34,6 @@ Vitepress sets its routing based on the file structure, so if you want a new rou
 
 At .vitepress/config.mts there is a CONFIG_OPTIONS constant that serves all the other features (except robots.txt) about the information about you and your blog. To ensure you customize it with your data, you have to change that constant.
 Other than that, you should also change the favicon, setting your own and changing the file at public/assets/images and its corresponding name/extension at config.mts head property that links to the favicon.
+
+## Deploy
+``npx vitepress build``
