@@ -7,7 +7,7 @@ image: blog/p2.jpg
 tag: VitePress
 ---
 
-# Second post
+# Just for fun,  the journey of a thousand miles begins with on step.
 Just for fun, try something new today and surprise yourself.
 
 ![Just for fun, try something new today and surprise yourself.](p2.jpg "Photo")

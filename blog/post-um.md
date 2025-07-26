@@ -7,7 +7,7 @@ image: blog/p1.jpg
 tag: VitePress
 ---
 
-# First post
+# Just for fun,  the journey of a thousand miles begins with on step.
 
 Just for fun,  the journey of a thousand miles begins with on step.
 
