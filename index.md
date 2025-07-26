@@ -11,7 +11,7 @@ hero:
       text: Blog
       link: /blog
     - theme: alt
-      text: About this project
+      text: About
       link: /about
     - theme: alt
       text: News
