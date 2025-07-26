@@ -5,11 +5,11 @@ import generateSitemap from './hooks/generateSitemap';
 import type { ConfigOptions } from './types/configOptions';
 
 const CONFIG_OPTIONS: ConfigOptions = {
-  title: "Vitepress blog starter template",
+  title: "Alien's blog",
   description: "Create your own blog with Vitepress",
-  hostname: "https://yourwebsite.com",
-  author: "Your name",
-  email: "your.email@mail.com"
+  hostname: "https://alien9.com",
+  author: "Alien Cheung",
+  email: "alien9@gmail.com"
 }
 
 // https://vitepress.dev/reference/site-config
@@ -27,7 +27,8 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'facebook', link: 'https://facebook.com/aliencheung' },
+      { icon: 'instagram', link: 'https://instagram.com/aliencheung' },
     ],
   },
   transformHead: async (context) => {

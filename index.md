@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Vitepress blog starter template"
-  text: "Create your own blog with Vitepress"
-  tagline: My great project tagline
+  name: "Alien's blog"
+  text: "Just for fun"
+  tagline: create something beautiful from nothing.
   actions:
     - theme: brand
       text: Blog
@@ -15,11 +15,7 @@ hero:
       link: /about
 
 features:
-  - title: RSS Feed
-    details: Your blog posts will be available for RSS Feed!
-  - title: Dynamic metatags
-    details: Your website will have metatags dynamic generated!
-  - title: Dynamic sitemap
-    details: Your sitemap will be updated automaticaly!
+  - title: Playground
+    details: fetching somethings
 ---
 
