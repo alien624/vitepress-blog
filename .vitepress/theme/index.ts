@@ -1,21 +1,23 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
-import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
-import './style.css'
-import BlogPostList from './components/blog/BlogPostList.vue'
-import News from './components/playground/News.vue'
+import { h } from "vue";
+import type { Theme } from "vitepress";
+import DefaultTheme from "vitepress/theme";
+import "./style.css";
+import BlogPostList from "./components/page/BlogPostList.vue";
+import NewsList from "./components/page/NewsList.vue";
+import AboutPage from "./components/page/AboutPage.vue";
 
 export default {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
+    });
   },
   enhanceApp({ app, router, siteData }) {
     // ...
     app.component("BlogPostList", BlogPostList);
-    app.component("News", News);
-  }
-} satisfies Theme
+    app.component("NewsList", NewsList);
+    app.component("AboutPage", AboutPage);
+  },
+} satisfies Theme;
