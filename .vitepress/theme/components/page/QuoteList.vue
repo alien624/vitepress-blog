@@ -4,7 +4,6 @@ async function postQuote(quoteData) {
   // Function to post a quote, api /quotes
   // Implementation will go here
   console.log("Posting quote...");
-  // Example: await fetch('/api/quotes', { method: 'POST', body: JSON.stringify(quoteData) });
   const resp = await fetch("https://quote.alien9.com", {
     method: "POST",
     headers: {
@@ -45,7 +44,7 @@ onMounted(() => {
           <footer>
             <cite
               >{{ quote.name }},
-              <a :href="quote.source">{{ quote.source }}</a></cite
+              <a :href="quote.url">{{ quote.source }}</a></cite
             >
           </footer>
         </blockquote>
