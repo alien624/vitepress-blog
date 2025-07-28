@@ -11,10 +11,12 @@ hero:
       text: Blog
       link: /blog
     - theme: alt
-      text: About
-      link: /about
-    - theme: alt
       text: News
       link: /news
+    - theme: alt
+      text: Quote
+      link: /quote
+    - theme: alt
+      text: About
+      link: /about
 ---
-

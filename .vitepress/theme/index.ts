@@ -5,6 +5,7 @@ import DefaultTheme from "vitepress/theme";
 import "./style.css";
 import BlogPostList from "./components/page/BlogPostList.vue";
 import NewsList from "./components/page/NewsList.vue";
+import QuoteList from "./components/page/QuoteList.vue";
 import AboutPage from "./components/page/AboutPage.vue";
 
 export default {
@@ -18,6 +19,7 @@ export default {
     // ...
     app.component("BlogPostList", BlogPostList);
     app.component("NewsList", NewsList);
+    app.component("QuoteList", QuoteList);
     app.component("AboutPage", AboutPage);
   },
 } satisfies Theme;

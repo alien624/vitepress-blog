@@ -33,6 +33,7 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Blog", link: "/blog" },
       { text: "News", link: "/news" },
+      { text: "Quote", link: "/quote" },
       { text: "About", link: "/about" },
     ],
 
