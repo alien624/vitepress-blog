@@ -5,7 +5,7 @@ async function postQuote(quoteData) {
   // Implementation will go here
   console.log("Posting quote...");
   // Example: await fetch('/api/quotes', { method: 'POST', body: JSON.stringify(quoteData) });
-  const resp = await fetch("http://quote.alien9.com", {
+  const resp = await fetch("https://quote.alien9.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
