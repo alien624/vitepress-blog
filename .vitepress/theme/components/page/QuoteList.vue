@@ -41,6 +41,7 @@ onMounted(() => {
       <li v-for="quote in quotes">
         <blockquote>
           <p>{{ quote.quote }}</p>
+          <p v-if="quote.category" class="category">{{ quote.category }}</p>
           <footer>
             <cite
               >{{ quote.name }},
