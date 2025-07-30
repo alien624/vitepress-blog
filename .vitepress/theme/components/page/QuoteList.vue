@@ -2,12 +2,7 @@
 import { onMounted, ref } from "vue";
 let quote = ref({});
 const model = ref("@cf/openchat/openchat-3.5-0106");
-const aiModels = [
-  "@cf/openchat/openchat-3.5-0106",
-  "@cf/meta/llama-3-8b-instruct-awq",
-  "@cf/meta/llama-3.1-8b-instruct-awq",
-  "@cf/mistralai/mistral-small-3.1-24b-instruct",
-];
+const aiModels = ["@cf/meta/llama-3-8b-instruct-awq"];
 
 async function postQuote() {
   quote.value = {}; // Reset quote before fetching a new one
@@ -44,11 +39,6 @@ onMounted(() => {
 });
 </script>
 <template>
-  <select v-model="model">
-    <option v-for="model in aiModels" :key="model" :value="model">
-      {{ model }}
-    </option>
-  </select>
   <button @click="postQuote">Get Quote</button>
   <transition name="fade" mode="out-in">
     <div v-if="quote.quote">
