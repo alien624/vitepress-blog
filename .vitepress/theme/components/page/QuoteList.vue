@@ -67,6 +67,7 @@ onMounted(() => {
           >
         </cite>
       </blockquote>
+      <template v-if="quote.meaning"> {{ quote.meaning }}</template>
     </div>
   </transition>
 </template>
