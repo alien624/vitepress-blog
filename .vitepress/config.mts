@@ -6,7 +6,7 @@ import type { ConfigOptions } from "./types/configOptions";
 
 const CONFIG_OPTIONS: ConfigOptions = {
   title: "Alien's blog",
-  description: "Create your own blog with Vitepress",
+  description: "Vitepress",
   hostname: "https://alien9.com",
   author: "Alien Cheung",
   email: "alien9@gmail.com",
@@ -29,6 +29,12 @@ export default defineConfig({
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    search: {
+      provider: "local",
+    },
+    footer: {
+      message: "Alien's Blog © 2025",
+    },
     nav: [
       { text: "Home", link: "/" },
       { text: "Blog", link: "/blog" },

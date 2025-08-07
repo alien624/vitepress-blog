@@ -2,11 +2,17 @@
 import { h } from "vue";
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
+import "vuetify/styles";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+import { createVuetify } from "vuetify";
 import "./style.css";
 import BlogPostList from "./components/page/BlogPostList.vue";
 import NewsList from "./components/page/NewsList.vue";
 import QuoteList from "./components/page/QuoteList.vue";
 import AboutPage from "./components/page/AboutPage.vue";
+
+const vuetify = createVuetify({ components, directives });
 
 export default {
   extends: DefaultTheme,
@@ -17,6 +23,7 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...
+    app.use(vuetify);
     app.component("BlogPostList", BlogPostList);
     app.component("NewsList", NewsList);
     app.component("QuoteList", QuoteList);

@@ -1,3 +1,8 @@
-# quote
+---
+layout: home
+
+hero:
+  name: "Quote"
+---
 
 <QuoteList />

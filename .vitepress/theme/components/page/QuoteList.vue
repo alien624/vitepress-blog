@@ -1,8 +1,9 @@
 <script setup>
+import { VPButton } from "vitepress/theme";
 import { onMounted, ref } from "vue";
 let quote = ref({});
 const model = ref("@cf/openchat/openchat-3.5-0106");
-const aiModels = ["@cf/meta/llama-3-8b-instruct-awq"];
+const aiModels = ["@cf/openchat/openchat-3.5-0106"];
 
 async function postQuote() {
   quote.value = {}; // Reset quote before fetching a new one
@@ -39,7 +40,6 @@ onMounted(() => {
 });
 </script>
 <template>
-  <button @click="postQuote">Get Quote</button>
   <transition name="fade" mode="out-in">
     <div v-if="quote.quote">
       <template v-if="quote.field">
@@ -70,4 +70,5 @@ onMounted(() => {
       <template v-if="quote.meaning"> {{ quote.meaning }}</template>
     </div>
   </transition>
+  <p><VPButton @click="postQuote" text="Get Quote" theme="alt" /></p>
 </template>
