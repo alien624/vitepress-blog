@@ -55,6 +55,9 @@ export default defineConfig({
     await generateFeed(context, CONFIG_OPTIONS);
   },
   vite: {
+    resolve: {
+      extensions: [".css"],
+    },
     css: {
       preprocessorOptions: {
         css: {
