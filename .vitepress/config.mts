@@ -33,10 +33,11 @@ export default defineConfig({
       provider: "local",
     },
     footer: {
-      message: "Alien's Blog  2025",
+      message: "Alien's Blog © 2025",
     },
     nav: [
       { text: "Home", link: "/" },
+      { text: "Blog", link: "/blog" },
       { text: "News", link: "/news" },
       { text: "Quote", link: "/quote" },
       { text: "About", link: "/about" },
@@ -48,15 +49,10 @@ export default defineConfig({
     ],
   },
   transformHead: async (context) => {
-    await generateMetatags(context, CONFIG_OPTIONS.hostname);
+    generateMetatags(context, CONFIG_OPTIONS.hostname);
   },
   buildEnd: async (context) => {
-    await generateSitemap(context, CONFIG_OPTIONS.hostname);
-    await generateFeed(context, CONFIG_OPTIONS);
-  },
-  vite: {
-    resolve: {
-      extensions: [".css"],
-    },
+    generateSitemap(context, CONFIG_OPTIONS.hostname);
+    generateFeed(context, CONFIG_OPTIONS);
   },
 });
