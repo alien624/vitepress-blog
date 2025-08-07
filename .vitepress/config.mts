@@ -1,11 +1,10 @@
-import { defineConfig } from "vitepress";
 import generateFeed from "./hooks/generateFeed";
 import generateMetatags from "./hooks/generateMetatags";
 import generateSitemap from "./hooks/generateSitemap";
 import type { ConfigOptions } from "./types/configOptions";
 
 const CONFIG_OPTIONS: ConfigOptions = {
-  title: "Alien's blog",
+  title: "Alien's Blog",
   description: "Vitepress",
   hostname: "https://alien9.com",
   author: "Alien Cheung",
@@ -33,11 +32,10 @@ export default defineConfig({
       provider: "local",
     },
     footer: {
-      message: "Alien's Blog © 2025",
+      message: "Alien's Blog  2025",
     },
     nav: [
       { text: "Home", link: "/" },
-      { text: "Blog", link: "/blog" },
       { text: "News", link: "/news" },
       { text: "Quote", link: "/quote" },
       { text: "About", link: "/about" },
@@ -49,25 +47,17 @@ export default defineConfig({
     ],
   },
   transformHead: async (context) => {
-    generateMetatags(context, CONFIG_OPTIONS.hostname);
+    await generateMetatags(context, CONFIG_OPTIONS.hostname);
   },
   buildEnd: async (context) => {
-    generateSitemap(context, CONFIG_OPTIONS.hostname);
-    /*************  ✨ Windsurf Command ⭐  *************/
-    /**
-   * Generates metatags for each page, including
-   * - canonical url
-   * - open graph protocol
-/*******  7a221ed4-7edf-4796-964a-92bd88e11559  *******/ generateFeed(
-      context,
-      CONFIG_OPTIONS
-    );
+    await generateSitemap(context, CONFIG_OPTIONS.hostname);
+    await generateFeed(context, CONFIG_OPTIONS);
   },
   vite: {
     css: {
       preprocessorOptions: {
         css: {
-          includePaths: [],
+          includePaths: ["node_modules"],
         },
       },
     },
