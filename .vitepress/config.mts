@@ -55,4 +55,14 @@ export default defineConfig({
     generateSitemap(context, CONFIG_OPTIONS.hostname);
     generateFeed(context, CONFIG_OPTIONS);
   },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        css: {
+          includePaths: ['node_modules'],
+        }
+      },
+    },
+    }
+  }
 });
