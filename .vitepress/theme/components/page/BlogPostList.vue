@@ -4,15 +4,18 @@ import { ref } from "vue";
 const posts = ref([]);
 
 async function loadPosts() {
-  const entries = await fetch("api.alien9.com/posts", {
+  const entries = await fetch("http://api.alien9.com/posts", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      "X-API-Key": env.API_KEY,
+      "X-API-Key": import.meta.env.API_KEY,
     },
-  }).then((res) => res.json());
+  }).then((res) => {
+    console.log("res", res);
+    return res.json();
+  });
   posts.value = entries;
-  console.log("posts", posts);
+  console.log("posts", posts.value);
 }
 
 loadPosts();
