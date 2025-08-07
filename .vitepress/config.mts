@@ -58,12 +58,5 @@ export default defineConfig({
     resolve: {
       extensions: [".css"],
     },
-    css: {
-      preprocessorOptions: {
-        css: {
-          includePaths: ["node_modules"],
-        },
-      },
-    },
   },
 });
