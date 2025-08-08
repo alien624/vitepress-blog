@@ -3,6 +3,7 @@ import generateMetatags from "./hooks/generateMetatags";
 import generateSitemap from "./hooks/generateSitemap";
 import type { ConfigOptions } from "./types/configOptions";
 import { defineConfig } from "vitepress";
+import vuetify from "vite-plugin-vuetify";
 
 const CONFIG_OPTIONS: ConfigOptions = {
   title: "Alien's Blog",
@@ -54,5 +55,11 @@ export default defineConfig({
   buildEnd: async (context) => {
     generateSitemap(context, CONFIG_OPTIONS.hostname);
     generateFeed(context, CONFIG_OPTIONS);
+  },
+  vite: {
+    ssr: {
+      noExternal: ["vuetify", /\.css$/],
+    },
+    plugins: [vuetify({ autoImport: true })],
   },
 });
