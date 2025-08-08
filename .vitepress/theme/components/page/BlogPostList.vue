@@ -4,7 +4,7 @@ import { ref } from "vue";
 const posts = ref([]);
 
 async function loadPosts() {
-  const entries = await fetch("https://api.alien9.com/posts", {
+  const entries = await fetch("https://api.alien9.com/blogs", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
