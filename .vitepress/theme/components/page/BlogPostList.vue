@@ -8,7 +8,7 @@ async function loadPosts() {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      "X-API-Key": import.meta.env.API_KEY,
+      "X-API-Key": import.meta.env.VITE_API_KEY,
     },
   }).then((res) => {
     console.log("res", res);
