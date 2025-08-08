@@ -8,8 +8,9 @@ export default createVuetify({
   ssr: true,
   components,
   theme: {
+    defaultTheme: "dark",
     themes: {
-      light: {
+      dark: {
         colors: {
           primary: "#FF0099",
           secondary: "#9900FF",
